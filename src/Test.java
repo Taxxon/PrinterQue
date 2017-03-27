@@ -3,6 +3,7 @@
  */
 public class Test {
     public static void main(String[]arg){
+        // Testa LinkedList
         String namn1 = "Emil";
         String namn2 = "Nils";
         String namn3 = "Anton";
@@ -24,5 +25,24 @@ public class Test {
         a.removeFirst();
         System.out.println(a.size());
         System.out.println(a.isEmpty());
+
+        //Testa PrintQueue
+        System.out.println("\n");
+        PrintQueue p = new PrintQueue();
+        p.enqueue(namn1);
+        System.out.println(p.l);
+        p.enqueue(namn2);
+        System.out.println(p.l);
+        p.enqueue(namn3);
+        System.out.println(p.l);
+        System.out.println(p.isEmpty());
+        System.out.println(p.size());
+        p.dequeue();
+        System.out.println(p.l);
+        p.dequeue();
+        System.out.println(p.l);
+        p.dequeue();
+        System.out.println(p.isEmpty());
+        System.out.println(p.size());
     }
 }
