@@ -3,11 +3,12 @@
  */
 public class Test {
     public static void main(String[]arg){
-        // Testa LinkedList
+
         String namn1 = "Emil";
         String namn2 = "Nils";
         String namn3 = "Anton";
 
+        // Testa LinkedList
         LinkedList a = new LinkedList();
         a.addFirst(namn1);
         System.out.println(a.toString());
@@ -23,8 +24,11 @@ public class Test {
         System.out.println(a.toString());
         System.out.println(a.size());
         a.removeFirst();
+        System.out.println(a.toString());
         System.out.println(a.size());
         System.out.println(a.isEmpty());
+        a.removeFirst();
+        a.removeLast();
 
         //Testa PrintQueue
         System.out.println("\n");
@@ -44,5 +48,7 @@ public class Test {
         p.dequeue();
         System.out.println(p.isEmpty());
         System.out.println(p.size());
+        p.dequeue();
+        System.out.println(p.l);
     }
 }

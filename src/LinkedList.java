@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 /**
  * Created by Emil Käck on 2017-03-20.
  */
@@ -52,22 +54,35 @@ public class LinkedList {
         return (first == null);
     }
 
-    public Node removeFirst(){
+    public void removeFirst(){
 
-        first = first.next;
-        return (first);
+        String tom = "";
+        if (first == last) {
+            first = first.next;
+        } else if (isEmpty()) {
+            System.out.println("Den är tom");
+        } else {
+            first = first.next;
+        }
+
     }
 
-    public Node removeLast(){
+    public void removeLast(){
 
         Node a = new Node();
         a = first;
-        while ( a.next != last){
-            a = a.next;
+        if (last == first) {
+            last.data = "";
+            first.data = "";
+        } else if (isEmpty()) {
+            System.out.println("Den är tom");
+        } else {
+            while (a.next != last) {
+                a = a.next;
+            }
+            a.next = null;
+            last = a;
         }
-        a.next = null;
-        last = a;
-        return (a);
     }
 
     public int size(){
